@@ -1,4 +1,16 @@
 const API_URL = '/products.json';
+// const API_URL = '/products-empty.json';
+// const API_URL = '/products-fetch-fail.json';
+
+
+Vue.component('statusbar', {
+  template: `<h4>
+    <template v-if="status.isFetchError">Fetch error</template>
+    <template v-else-if="!status.isLoaded">Loading ...</template>
+    <template v-else-if="products.length == 0 || fproducts.length == 0">No products</template>
+  </h4>`,
+  props: ['status', 'products', 'fproducts'],
+})
 
 
 Vue.component('product', {
@@ -6,7 +18,7 @@ Vue.component('product', {
     <img src="./img/placeholder.jpg" alt="Image of the Product">
     <h3>{{ title }}</h3>
     <p>{{ price }}</p>
-    <button class="cta">Add to Cart</button>
+    <slot></slot>
   </li>`,
   props: ['title', 'price', 'id']
 })
@@ -14,7 +26,7 @@ Vue.component('product', {
 
 Vue.component('cart', {
   template: `<div class="cart">
-    <div v-if="isVisibleCart" v-on:click="removeHandler">
+    <div v-if="isVisibleCart">
       <ul class="items">
         <slot></slot>
       </ul>
@@ -30,7 +42,6 @@ Vue.component('cart', {
     openCartHandler() {
       this.isVisibleCart = !this.isVisibleCart;
     },
-
     removeHandler(e) {
       this.$emit('remove', e)
     }
@@ -45,7 +56,10 @@ const vue = new Vue({
     products: [],
     filteredProducts: [],
     search: '',
-    isLoaded: false,
+    status: {
+      isLoaded: false,
+      isFetchError: false,
+    },
   },
   methods: {
     addToCartHandler(e) {
@@ -107,10 +121,11 @@ const vue = new Vue({
         this.products = data;
         this.filteredProducts = data;
 
-        this.isLoaded = true;
+        this.status.isLoaded = true;
       })
       .catch(err => {
         console.log(err);
+        this.status.isFetchError = true;
       }) 
   }
 })

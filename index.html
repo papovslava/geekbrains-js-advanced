@@ -10,31 +10,28 @@
 </head>
 <body>
   <div id="app" class="wrapper">
-    <header>
+    <header v-if="!status.isFetchError">
       <input id="search" v-model="search" v-on:input="searchHandler" placeholder="Type item name">
-      <cart v-on:remove="removeFromCartHandler">
+      <cart>
         <product
           v-for="product in cart"
           v-bind:title="product.title"
           v-bind:price="product.price"
-          v-bind:id="product.id"
-        />
+          v-bind:id="product.id">
+          <button class="cta" v-on:click="removeFromCartHandler">Remove from Cart</button>
+        </product>
       </cart>
     </header>
     <main>
-      <ul id="products" class="items" v-on:click="addToCartHandler">
-        <div v-if="!isLoaded">
-          <h4>Loading ...</h4>
-        </div>
-        <div v-if="isLoaded && products.length == 0 || filteredProducts.length == 0">
-          <h4>No products</h4>
-        </div>
+      <statusbar :status="status" :products="products" :fproducts="filteredProducts"></statusbar>
+      <ul id="products" class="items" v-if="products.length > 0">
         <product 
           v-for="product in filteredProducts"
           v-bind:title="product.title"
           v-bind:price="product.price"
-          v-bind:id="product.id"          
-        />
+          v-bind:id="product.id">
+          <button class="cta" v-on:click="addToCartHandler">Add to Cart</button>
+        </product>
       </ul> 
     </main>
   </div>
