@@ -9,18 +9,38 @@
   <title>eShop</title>
 </head>
 <body>
-  <div class="wrapper">
+  <div id="app" class="wrapper">
     <header>
-      <nav>
-        <button class="cart" type="button">Cart</button>
-      </nav>  
+      <input id="search" v-model="search" v-on:input="searchHandler" placeholder="Type item name">
+      <cart v-on:remove="removeFromCartHandler">
+        <product
+          v-for="product in cart"
+          v-bind:title="product.title"
+          v-bind:price="product.price"
+          v-bind:id="product.id"
+        />
+      </cart>
     </header>
     <main>
-      <ul id="products" class="items">
+      <ul id="products" class="items" v-on:click="addToCartHandler">
+        <div v-if="!isLoaded">
+          <h4>Loading ...</h4>
+        </div>
+        <div v-if="isLoaded && products.length == 0 || filteredProducts.length == 0">
+          <h4>No products</h4>
+        </div>
+        <product 
+          v-for="product in filteredProducts"
+          v-bind:title="product.title"
+          v-bind:price="product.price"
+          v-bind:id="product.id"          
+        />
       </ul> 
     </main>
   </div>
 
-  <script src="main.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+  <script src="vue.js"></script>
+  <script src="main-vue.js"></script>
 </body>
 </html>

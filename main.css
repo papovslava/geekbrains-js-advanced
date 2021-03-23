@@ -12,6 +12,10 @@ nav {
   border: 1px solid gray;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+}
 
 .wrapper {
   max-width: 64rem;
@@ -47,4 +51,8 @@ nav {
 .items > li button {
   margin-top: 1rem;
   align-self: flex-end;
+}
+
+.cart ul {
+  margin-bottom: 2rem;
 }
