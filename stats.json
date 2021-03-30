@@ -1,0 +1,34 @@
+[
+  {
+    "timestamp": "2021-03-30T16:38:42.485Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Shirt",
+      "price": 150,
+      "id": 10011002
+    }
+  },
+  {
+    "timestamp": "2021-03-30T16:39:36.636Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-03-30T16:39:38.227Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011002"
+    }
+  },
+  {
+    "timestamp": "2021-03-30T16:39:39.640Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011002"
+    }
+  }
+]

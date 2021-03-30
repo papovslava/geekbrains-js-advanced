@@ -1,6 +1,6 @@
-const API_URL = '/products.json';
-// const API_URL = '/products-empty.json';
-// const API_URL = '/products-fetch-fail.json';
+const API_URL = 'http://127.0.0.1:3000';
+const PRODUCTS_ENDPOINT = '/products';
+const CART_ENDPOINT = '/cart';
 
 
 Vue.component('statusbar', {
@@ -65,17 +65,44 @@ const vue = new Vue({
     addToCartHandler(e) {
       console.log(e);
       const id = e.target.closest('.product').dataset.id;
-      const good = this.products.find((item) => item.id == id);
+      const product = this.products.find(item => item.id == id);
 
-      this.cart.push(good);
+      this.cart.push(product);
+
+      const requestCart = {
+        url: API_URL + CART_ENDPOINT,
+        type: 'POST',
+        payload: JSON.stringify(product),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      };
+      this.fetchPromise(requestCart)
+        .catch(err => {
+          console.log(err);
+        }); 
+
     },
 
     removeFromCartHandler(e) {
-      console.log(e)
+      // console.log(e)
       const id = e.target.closest('.product').dataset.id;
-      const goodIndex = this.cart.findIndex((item) => item.id == id);
+      const productIndex = this.cart.findIndex((item) => item.id == id);
 
-      this.cart.splice(goodIndex - 1, 1);
+      this.cart.splice(productIndex - 1, 1);
+
+      const requestCart = {
+        url: API_URL + CART_ENDPOINT,
+        type: 'DELETE',
+        payload: JSON.stringify({id: id}),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      };
+      this.fetchPromise(requestCart)
+        .catch(err => {
+          console.log(err);
+        });       
     },
 
     searchHandler() {
@@ -86,7 +113,7 @@ const vue = new Vue({
       this.filteredProducts = this.products.filter((product) => regexp.test(product.title));
     },
 
-    fetch(error, success) {
+    fetch(request, error, success) {
       let xhr;
     
       if (window.XMLHttpRequest) {
@@ -104,19 +131,26 @@ const vue = new Vue({
           }
         }
       }
-    
-      xhr.open('GET', API_URL, true);
-      xhr.send();
+
+      xhr.open(request.type, request.url, true);
+      if (request.headers) {
+        xhr.setRequestHeader('Content-Type','application/json');
+      }
+      xhr.send(request.payload);
     },
 
-    fetchPromise() {
+    fetchPromise(request) {
       return new Promise((resolve, reject) => {
-        this.fetch(reject, resolve)
+        this.fetch(request, reject, resolve)
       }) 
     }
   },
   mounted() {
-    this.fetchPromise()
+    const requestProducts = {
+      url: API_URL + PRODUCTS_ENDPOINT,
+      type: 'GET'
+    };
+    this.fetchPromise(requestProducts)
       .then(data => {
         this.products = data;
         this.filteredProducts = data;
@@ -126,6 +160,19 @@ const vue = new Vue({
       .catch(err => {
         console.log(err);
         this.status.isFetchError = true;
-      }) 
+      });
+
+      const requestCart = {
+        url: API_URL + CART_ENDPOINT,
+        type: 'GET'
+      };
+      this.fetchPromise(requestCart)
+        .then(data => {
+          this.cart = data;
+          if (!this.cart.length) { console.log('Cart is empty'); }
+        })
+        .catch(err => {
+          console.log(err);
+        }); 
   }
 })
