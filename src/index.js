@@ -2,6 +2,8 @@ const API_URL = 'http://127.0.0.1:3000';
 const PRODUCTS_ENDPOINT = '/products';
 const CART_ENDPOINT = '/cart';
 
+import Vue from "./js/vue.js";
+import Product from "./js/components/Product.vue";
 
 Vue.component('statusbar', {
   template: `<h4>
@@ -13,15 +15,15 @@ Vue.component('statusbar', {
 })
 
 
-Vue.component('product', {
-  template: `<li :data-id="id" class="product">
-    <img src="./img/placeholder.jpg" alt="Image of the Product">
-    <h3>{{ title }}</h3>
-    <p>{{ price }}</p>
-    <slot></slot>
-  </li>`,
-  props: ['title', 'price', 'id']
-})
+// Vue.component('product', {
+//   template: `<li :data-id="id" class="product">
+//     <img src="./img/placeholder.jpg" alt="Image of the Product">
+//     <h3>{{ title }}</h3>
+//     <p>{{ price }}</p>
+//     <slot></slot>
+//   </li>`,
+//   props: ['title', 'price', 'id']
+// })
 
 
 Vue.component('cart', {
@@ -60,6 +62,7 @@ const vue = new Vue({
       isLoaded: false,
       isFetchError: false,
     },
+    components: { Product }
   },
   methods: {
     addToCartHandler(e) {
