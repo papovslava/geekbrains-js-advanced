@@ -1,23 +1,25 @@
 const { VueLoaderPlugin } = require('vue-loader');
-// const path = require('path');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
-  output: {
-    filename: 'bundle.js',
-    // path: path.resolve(__dirname, 'dist')
+  entry: {
+    'index': './src/index.js'
   },
+  output: {
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: './',
+    assetModuleFilename: 'assets/[name][ext][query]'
+  },
+  watch: true,
   module: {
     rules: [
-      // { test: /ignore\.(png|jpg|gif|svg)$/, loader: 'ignore-loader' },
       { 
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader', 
-        options: { 
-          outputPath: 'img', 
-          name: '[name].[ext]' 
-        }
+        type: 'asset/resource'
       },
       {
         test: /\.vue$/,
@@ -27,17 +29,17 @@ module.exports = {
         test: /\.css$/,
         use: [ 
           'vue-style-loader',
+          'style-loader',
           'css-loader'
         ]
-      },
-      {
-        test: /\.html$/i,
-        loader: 'html-loader'
       }
     ]
   },
   plugins: [
-    // make sure to include the plugin!
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new HtmlWebpackPlugin({
+        template: './src/index.html',
+        filename: 'index.html'
+    })
   ]
 }

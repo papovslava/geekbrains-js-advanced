@@ -30,5 +30,458 @@
     "product": {
       "id": "10011002"
     }
+  },
+  {
+    "timestamp": "2021-04-01T20:14:46.076Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:22:40.109Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:24:20.228Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:31:11.721Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:34:58.213Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:35:12.596Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:36:32.945Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:38:02.793Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:38:23.305Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:41:22.191Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:41:32.710Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:42:22.055Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:42:26.859Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:42:37.751Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:43:37.161Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:44:29.957Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Jacket",
+      "price": 350,
+      "id": 10011004
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:48:52.010Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011004"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:49:09.300Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011004"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:52:26.431Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:53:21.342Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Jacket",
+      "price": 350,
+      "id": 10011004
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:54:24.294Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011004"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:54:58.768Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:55:38.445Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:56:37.067Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:57:27.907Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:57:31.386Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Jacket",
+      "price": 350,
+      "id": 10011004
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:57:55.970Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011004"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:58:29.180Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:58:34.063Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:59:33.226Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T21:59:35.199Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:01:12.216Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011004"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:01:55.209Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:01:56.249Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:23:44.684Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:31:14.124Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:31:16.252Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:31:17.475Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:31:18.859Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Jacket",
+      "price": 350,
+      "id": 10011004
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:31:21.063Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011004"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:35:40.153Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:44:14.636Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Jacket",
+      "price": 350,
+      "id": 10011004
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:51:32.774Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Jacket",
+      "price": 350,
+      "id": 10011004
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:51:35.134Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011004"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:54:39.271Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {}
+  },
+  {
+    "timestamp": "2021-04-01T22:54:42.556Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011004"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:55:37.453Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011004"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:58:20.475Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Jacket",
+      "price": 350,
+      "id": 10011004
+    }
+  },
+  {
+    "timestamp": "2021-04-01T22:58:27.541Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011004"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T23:08:29.461Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Jacket",
+      "price": 350,
+      "id": 10011004
+    }
+  },
+  {
+    "timestamp": "2021-04-01T23:08:40.062Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Jacket",
+      "price": 350,
+      "id": 10011004
+    }
+  },
+  {
+    "timestamp": "2021-04-01T23:09:57.182Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011004"
+    }
+  },
+  {
+    "timestamp": "2021-04-01T23:10:14.900Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011004"
+    }
+  },
+  {
+    "timestamp": "2021-04-02T06:54:30.748Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Socks",
+      "price": 50,
+      "id": 10011003
+    }
+  },
+  {
+    "timestamp": "2021-04-02T06:54:32.474Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011003"
+    }
+  },
+  {
+    "timestamp": "2021-04-02T06:54:33.664Z",
+    "action": "NEW PRODUCT IN CART",
+    "product": {
+      "title": "Jacket",
+      "price": 350,
+      "id": 10011004
+    }
+  },
+  {
+    "timestamp": "2021-04-02T06:54:34.946Z",
+    "action": "DELETE PRODUCT FROM CART",
+    "product": {
+      "id": "10011004"
+    }
   }
 ]
